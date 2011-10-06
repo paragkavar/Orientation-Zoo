@@ -45,6 +45,13 @@ static int idCounter = 0;
     return YES;
 }
 
+- (void) willRotateToInterfaceOrientation: (UIInterfaceOrientation) orientation duration: (NSTimeInterval) duration
+{
+    NSLog(@"[controller #%i willRotateToInterfaceOrientation:%i (== %@)]",
+        idNumber, orientation, NSStringFromUIInterfaceOrientation(orientation));
+    [super willRotateToInterfaceOrientation:orientation duration:duration];
+}
+
 - (void) didRotateFromInterfaceOrientation: (UIInterfaceOrientation) io
 {
     [(id) self.view updateInfo];
