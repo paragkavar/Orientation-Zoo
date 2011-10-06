@@ -5,7 +5,7 @@
 
 - (id) init
 {
-    [super init];
+    self = [super init];
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self
         selector:@selector(orientationChanged:)
@@ -18,7 +18,6 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
-    [super dealloc];
 }
 
 - (void) orientationChanged: (id) notification

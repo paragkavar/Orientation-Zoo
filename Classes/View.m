@@ -31,12 +31,12 @@ static int idCounter     = 0;
 
 + (id) withController: (id) ctrl
 {
-    return [[[self alloc] initWithController:ctrl] autorelease];
+    return [[self alloc] initWithController:ctrl];
 }
 
 - (id) initWithController: (id) ctrl
 {
-    [super initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    self = [super initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     controller = ctrl;
 
     [self setBackgroundColor:[self nextColor]];
@@ -63,7 +63,6 @@ static int idCounter     = 0;
 - (void) dealloc
 {
     NSLog(@"[view #%i dealloc]", idNumber);
-    [super dealloc];
 }
 
 
@@ -75,7 +74,7 @@ static int idCounter     = 0;
     [label setFont:[UIFont systemFontOfSize:40]];
     [label setTextColor:[UIColor whiteColor]];
     [label setBackgroundColor:[UIColor blackColor]];
-    return [label autorelease];
+    return label;
 }
 
 - (UILabel*) idLabel
@@ -97,7 +96,7 @@ static int idCounter     = 0;
         | UIViewAutoresizingFlexibleTopMargin];
     [slider setValue:1];
     [slider setFrame:CGRectMake(500, 900, 200, 40)];
-    return [slider autorelease];
+    return slider;
 }
 
 - (UIButton*) actionButton

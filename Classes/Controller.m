@@ -8,7 +8,7 @@ static int idCounter = 0;
 
 - (id) init
 {
-    [super init];
+    self = [super init];
     idNumber = idCounter++;
     additionalViews = [[NSMutableArray alloc] init];
     return self;
@@ -17,8 +17,6 @@ static int idCounter = 0;
 - (void) dealloc
 {
     NSLog(@"[controller #%i dealloc]", idNumber);
-    [additionalViews release];
-    [super dealloc];
 }
 
 - (void) loadView
@@ -59,7 +57,6 @@ static int idCounter = 0;
     Controller *modal = [[Controller alloc] init];
     NSLog(@"[controller #%i addAnotherController]", idNumber);
     [self presentModalViewController:modal animated:YES];
-    [modal release];
 }
 
 - (void) attachAnotherControllerByHand
@@ -87,7 +84,6 @@ static int idCounter = 0;
         @"Reset to Single View", @"Present Modal Controller",
         @"Dismiss Modal Controller", @"Attach Controller by Hand", nil];
     [sheet showFromRect:[sender frame] inView:[sender superview] animated:YES];
-    [sheet release];
 }
 
 - (void) actionSheet: (UIActionSheet*) actionSheet didDismissWithButtonIndex: (NSInteger) button

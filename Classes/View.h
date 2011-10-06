@@ -1,6 +1,6 @@
 @interface View : UIView
 {
-    id controller;
+    id __unsafe_unretained controller;
     int idNumber;
     UILabel *frameLabel;
     UILabel *transformLabel;

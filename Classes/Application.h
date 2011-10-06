@@ -7,7 +7,7 @@
     NotifyLog *logger;
 }
 
-@property(retain, nonatomic) IBOutlet UIWindow *window;
+@property(strong, nonatomic) IBOutlet UIWindow *window;
 
 @end
 

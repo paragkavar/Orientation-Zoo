@@ -14,12 +14,5 @@
     [window makeKeyAndVisible];
 }
 
-- (void)dealloc
-{
-    [root release];
-    [logger release];
-    [window release];
-    [super dealloc];
-}
 
 @end
