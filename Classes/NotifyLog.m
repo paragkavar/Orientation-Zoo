@@ -24,8 +24,7 @@
 - (void) orientationChanged: (id) notification
 {
     UIInterfaceOrientation newIO = [[UIDevice currentDevice] orientation];
-    NSLog(@"UIDevice notification, new io: %i [%@]",
-        newIO, NSStringFromUIOrientation(newIO));
+    NSLog(@"UIDevice notification, new io: %i [%@]", newIO, NSStringFromUIOrientation(newIO));
 }
 
 @end
