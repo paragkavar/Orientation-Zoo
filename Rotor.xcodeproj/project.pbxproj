@@ -205,6 +205,7 @@
 				GCC_PREFIX_HEADER = Rotor_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Rotor-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Rotor;
 				SDKROOT = iphoneos;
 			};
@@ -222,6 +223,7 @@
 				GCC_PREFIX_HEADER = Rotor_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Rotor-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Rotor;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
