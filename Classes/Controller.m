@@ -41,7 +41,7 @@ static int idCounter = 0;
 - (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) io
 {
     NSLog(@"[controller #%i shouldAutorotateTo:%i (== %@)]",
-        idNumber, io, NSStringFromUIOrientation(io));
+        idNumber, io, NSStringFromUIInterfaceOrientation(io));
     return YES;
 }
 
@@ -78,7 +78,7 @@ static int idCounter = 0;
 
 - (void) displayActionPopupFrom: (id) sender
 {
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Actions"
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil
         delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil
         otherButtonTitles:@"Switch View", @"Add Another View",
         @"Reset to Single View", @"Present Modal Controller",

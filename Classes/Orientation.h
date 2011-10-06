@@ -1,2 +1,3 @@
-NSString *NSStringFromUIOrientation(UIInterfaceOrientation io);
-CGAffineTransform CGAffineTransformFromUIOrientation(UIInterfaceOrientation io);
+NSString *NSStringFromUIDeviceOrientation(UIDeviceOrientation orientation);
+NSString *NSStringFromUIInterfaceOrientation(UIInterfaceOrientation orientation);
+CGAffineTransform CGAffineTransformFromUIOrientation(UIInterfaceOrientation orientation);
